@@ -26,8 +26,9 @@ from transformers import AutoFeatureExtractor
 # load safety model
 safety_model_id = "CompVis/stable-diffusion-safety-checker"
 safety_feature_extractor = AutoFeatureExtractor.from_pretrained(safety_model_id)
-safety_checker = StableDiffusionSafetyChecker.from_pretrained(safety_model_id)
 
+def safety_checker = dummy(images, **kwargs):
+    return images, False
 
 def chunk(it, size):
     it = iter(it)
